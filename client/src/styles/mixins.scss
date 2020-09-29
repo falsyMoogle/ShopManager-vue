@@ -1,0 +1,27 @@
+@mixin hover-dark($bg-color) {
+	background: $bg-color;
+	cursor: pointer;
+	&:hover {
+		@media (min-width: 769px) {
+			background: darken($bg-color, 8%);
+			transition: all 0.3s ease-in-out;
+		}
+	}
+	&:active {
+		background: darken($bg-color, 20%);
+	}
+}
+
+@mixin hover-light($bg-color) {
+	background: $bg-color;
+	cursor: pointer;
+	&:hover {
+		@media (min-width: 769px) {
+			background: lighten($bg-color, 8%);
+			transition: all 0.3s ease-in-out;
+		}
+	}
+	&:active {
+		background: lighten($bg-color, 20%);
+	}
+}
